@@ -1,0 +1,32 @@
+name: Ejecutar ETL de Inventario
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Se ejecuta todos los lunes a las 00:00
+  workflow_dispatch:   # Permite ejecutarlo manualmente con un botón
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del código
+      uses: actions/checkout@v3
+
+    - name: Configurar Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Instalar dependencias
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Ejecutar Script ETL
+      env:
+        # Aquí es donde GitHub usa los "Secrets" que configuramos
+        GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+        KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+      run: python main_etl.py
