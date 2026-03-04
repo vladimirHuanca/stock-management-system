@@ -1,0 +1,26 @@
+# Seguridad: Credenciales y Claves
+google_key.json
+kaggle.json
+.kaggle/
+
+# Ignorar todo dentro de data/
+data/**
+
+# Permitir las carpetas y archivos .gitkeep
+!data/.gitkeep
+!data/**/.gitkeep
+
+# Ignorar archivos CSV y reportes Power BI completos para proteger el Data Warehouse
+*.csv
+*.pbix
+
+# Ignorar archivos temporales de Python y entornos
+__pycache__/
+*.pyc
+.venv/
+.env
+extras/
+
+# Ignorar archivos de configuración del sistema
+.DS_Store
+Thumbs.db
