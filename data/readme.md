@@ -6,7 +6,7 @@ El proyecto se apoya en datasets de Kaggle y fuentes internas.
   [Carpeta datos_ingesta](https://drive.google.com/drive/folders/1mZbo0u4tmbYbIdgVzA4wpTPzTx4rjrL3?usp=drive_link)
 
 
-  ## Kaggle (raw):**
+  ## Kaggle (raw):
   [QUE FUERON OBETENIDOS KAGGLE].(https://www.kaggle.com/datasets/bhanupratapbiswas/inventory-analysis-case-study?select=SalesFINAL12312016.csv)
 
 
