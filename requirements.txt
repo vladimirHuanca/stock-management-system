@@ -1,8 +1,21 @@
+
+# Librerías principales para análisis de datos
 pandas
+pyarrow
+
+# Integración con Google BigQuery
 pandas-gbq
 google-cloud-bigquery
-kaggle
-pyarrow
+
+# Kaggle API para descarga de datasets
+kaggle link[]
+
+# Jupyter y entorno interactivo
 jupyter
-nbconvert
 ipykernel
+nbconvert
+
+# Extras recomendados
+matplotlib
+seaborn
+
